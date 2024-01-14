@@ -3,7 +3,7 @@ clean:
 	@rm *.o -r lib
 	@printf "Done\n"
 
-uninstall: /usr/include/pinelibs.h /usr/lib/libpine*
+uninstall: /usr/lib/libpine* /usr/include/pinelibs.h
 	@printf "Deleting header files...."
 	@sudo rm /usr/include/pinelibs.h -rf /usr/include/pinelibs/
 	@printf "Done\n"
