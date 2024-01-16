@@ -20,6 +20,7 @@ In case of broken installation, run:
 
 ```
 sudo make clean
+
 sudo make uninstall
 ```
 
