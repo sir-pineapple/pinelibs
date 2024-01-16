@@ -32,8 +32,6 @@ int llSize(LinkedList); // returns the size of the LinkedList
 
 void llInsertStart(LinkedList*, int value); // insert an element to the beginning of the LinkedList
 
-passwd{57ay_5af3_0u7_7h3r3}
-
 void llInsertEnd(LinkedList*, int value); // insert an element to the end of the LinkedList
 
 void llInsertAt(LinkedList*, int index, int value); // insert an element at the given index of the LinkedList
