@@ -1,6 +1,6 @@
 # Pinelibs :books:
 
-A set of libraries for C/C++
+A set of libraries for C
 
 read the header files for more info on how to use them
 
@@ -34,7 +34,7 @@ sudo make uninstall
 ## Libraries Included :clipboard:
 
 - pinelibs.h: includes all headers in the pinelibs library
-- bool.h: defines booleans (as Bool) in C/C++
+- bool.h: defines booleans (as Bool) in C
 - float.h: allows you to store Floating Point values in Integer variables and retrieve them without loosing precision
 - vector.h: defines Vectors in C
 - linkedlist.h: defines LinkedLists in C
