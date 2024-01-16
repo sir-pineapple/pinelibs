@@ -96,20 +96,10 @@ void treeInsert(Tree* t, int value) {
 		return;
 	}
 	if ((*t)->value > value) {
-		if ((*t)->left == NULL) {
-			(*t)->left = newTree(value);
-		}
-		else {
-			treeInsert(&(*t)->left, value);
-		}
+		treeInsert(&(*t)->left, value);
 	}
 	else {
-		if ((*t)->right == NULL) {
-			(*t)->right = newTree(value);
-		}
-		else {
-			treeInsert(&(*t)->right, value);
-		}
+		treeInsert(&(*t)->right, value);
 	}
 }
 
