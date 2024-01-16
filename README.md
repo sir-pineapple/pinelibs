@@ -19,9 +19,8 @@ sudo make install
 In case of broken installation, run:
 
 ```
-sudo make clean
-
-sudo make uninstall
+rm *.o -r lib
+sudo make install
 ```
 
 ## Uninstallation :broken_heart:
