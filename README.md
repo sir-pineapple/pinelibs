@@ -15,6 +15,7 @@ sudo make install
 In case of broken installation, run:
 
 sudo make clean
+
 sudo make uninstall
 
 to clear residual files and install again
