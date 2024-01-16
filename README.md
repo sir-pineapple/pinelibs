@@ -34,6 +34,7 @@ sudo make uninstall
 
 ## Libraries Included
 
+- pinelibs.h: includes all headers in the pinelibs library
 - bool.h: defines booleans (as Bool) in C/C++
 - float.h: allows you to store Floating Point values in Integer variables and retrieve them without loosing precision
 - vector.h: defines Vectors in C
