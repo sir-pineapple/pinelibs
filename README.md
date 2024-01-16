@@ -1,4 +1,4 @@
-# Pinelibs
+# Pinelibs :books:
 
 A set of libraries for C/C++
 
@@ -6,7 +6,7 @@ read the header files for more info on how to use them
 
 
 
-## Installation
+## Installation :sparkles:
 
 To install the libraries on your system, run:
 
@@ -24,7 +24,7 @@ sudo make clean
 sudo make uninstall
 ```
 
-## Uninstallation
+## Uninstallation :broken_heart:
 
 To uninstall pinelibs, go back to the pinelibs directory and run:
 
@@ -32,7 +32,7 @@ To uninstall pinelibs, go back to the pinelibs directory and run:
 sudo make uninstall
 ```
 
-## Libraries Included
+## Libraries Included :clipboard:
 
 - pinelibs.h: includes all headers in the pinelibs library
 - bool.h: defines booleans (as Bool) in C/C++
