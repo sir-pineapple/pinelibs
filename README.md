@@ -1,40 +1,42 @@
-created by: github.com/sir-pineapple
+# Pinelibs
 
-pinelibs is a set of libraries that can be used in C
+A set of libraries for C/C++
 
-you can read the header files for more info on how to use them
+read the header files for more info on how to use them
 
-Installation:
 
+
+## Installation
+
+To install the libraries on your system, run:
+
+```
 git clone https://github.com/sir-pineapple/pinelibs.git
-
 cd pinelibs
-
 sudo make install
+```
 
 In case of broken installation, run:
 
+```
 sudo make clean
 sudo make uninstall
+```
 
-to clear residual files and install again
+## Uninstallation
 
-To uninstall, go to the pinelibs directory (git clone it again if you deleted it) and run:
+To uninstall pinelibs, go back to the pinelibs directory and run:
 
+```
 sudo make uninstall
+```
 
-Libraries included:
+## Libraries Included
 
-bool.h: defines Booleans in C
-
-float.h: store Floating Point values in Integer variables without loosing precision
-
-vector.h: defines Vectors in C
-
-linkedlist.h: defines Linked Lists in C
-
-stack.h: defines Stacks in C
-
-queue.h: defines Queues in C
-
-tree.h: defines Binary Trees in C
+- bool.h: defines booleans (as Bool) in C/C++
+- float.h: allows you to store Floating Point values in Integer variables and retrieve them without loosing precision
+- vector.h: defines Vectors in C
+- linkedlist.h: defines LinkedLists in C
+- stack.h: defines Stacks in C
+- queue.h: defines Queues in C
+- tree.h: defines Binary Trees in C
