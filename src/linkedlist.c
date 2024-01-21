@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #include <pinelibs/bool.h>
 
+LinkedList newLinkedList() {
+	return NULL;
+}
+
 Bool llIsEmpty(LinkedList l) {
-	return l == newLinkedList;
+	return l == NULL;
 }
 
 int llSize(LinkedList l) {
@@ -30,7 +34,7 @@ void llInsertEnd(LinkedList* l, int value) {
 	Node* newnode = (Node*) malloc(sizeof(Node));
 	newnode->value = value;
 	newnode->next = NULL;
-	if (*l == newLinkedList) {
+	if (*l == NULL) {
 		*l = newnode;
 		return;
 	}
@@ -65,7 +69,7 @@ void llInsertAt(LinkedList* l, int index, int value) {
 }
 
 int llRemoveStart(LinkedList* l) {
-	if (*l == newLinkedList) {
+	if (*l == NULL) {
 		return POP_FAILURE;
 	}
 	Node* n = *l;
@@ -76,7 +80,7 @@ int llRemoveStart(LinkedList* l) {
 }
 
 int llRemoveEnd(LinkedList* l) {
-	if (*l == newLinkedList) {
+	if (*l == NULL) {
 		return POP_FAILURE;
 	}
 	Node* n = *l;
@@ -96,7 +100,7 @@ int llRemoveEnd(LinkedList* l) {
 }
 
 int llRemoveAt(LinkedList* l, int index) {
-	if (*l == newLinkedList) {
+	if (*l == NULL) {
 		return POP_FAILURE;
 	}
 	if (index == 0) {

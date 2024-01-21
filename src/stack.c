@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #include <pinelibs/bool.h>
 
+Stack newStack() {
+	return NULL;
+}
+
 Bool stackIsEmpty(Stack s) {
-	return s == newStack;
+	return s == NULL;
 }
 
 void stackPush(Stack* s, int value) {
@@ -17,7 +21,7 @@ void stackPush(Stack* s, int value) {
 }
 
 int stackPop(Stack* s) {
-	if (*s == newStack) {
+	if (*s == NULL) {
 		return POP_FAILURE;
 	}
 	Node* n = *s;

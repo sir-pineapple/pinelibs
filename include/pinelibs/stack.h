@@ -20,7 +20,7 @@ typedef struct Node {int value; struct Node* next;} Node; // defines Node as an 
 
 #define Stack Node* // define Stack as a Node pointer
 
-#define newStack (void*)0 // define newStack as NULL
+Stack newStack(); // define newStack as NULL
 
 Bool stackIsEmpty(Stack); // returns if the Stack is empty or not
 

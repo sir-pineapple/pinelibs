@@ -20,7 +20,7 @@ typedef struct Node {int value; struct Node* next;} Node; // defines Node as an 
 
 #define LinkedList Node* // define LinkedList as a Node pointer
 
-#define newLinkedList (void*)0 // define newLinkedList as NULL
+LinkedList newLinkedList(); // define newLinkedList as NULL
 
 #ifndef POP_FAILURE
 #define POP_FAILURE 0x80000000 // this is returned if the LinkedList is empty
