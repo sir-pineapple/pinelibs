@@ -32,5 +32,7 @@ int stackPop(Stack* s) {
 }
 
 int stackTop(Stack s) {
-	return s->value;
+	if (s != NULL) {
+		return s->value;
+	}
 }
