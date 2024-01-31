@@ -14,7 +14,7 @@ Tree newTree(int value) {
 
 int treeHeight(Tree t) {
 	if (t == NULL) {
-		return -1;
+		return 0;
 	}
 	int l = treeHeight(t->left);
 	int r = treeHeight(t->right);
