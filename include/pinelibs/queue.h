@@ -13,12 +13,7 @@
 
 #include <pinelibs/bool.h>
 
-#ifndef PINENODE
-#define PINENODE
-typedef struct Node {int value; struct Node* next;} Node; // defines Node as an int value and Node pointer to the next Node
-#endif // PINENODE
-
-typedef struct {Node* front; Node* rear;} Queue; // define Queue as a Node pointer to front and one to rear
+typedef struct Queue Queue; // declares Queue
 
 Queue newQueue(); // returns a NULL Queue
 

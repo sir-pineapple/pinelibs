@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <pinelibs/bool.h>
 
+struct Node {int value; struct Node* next;};
+
+struct Queue {struct Node* front; struct Node* rear;};
+
 Queue newQueue() {
 	Queue q;
 	q.front = NULL;

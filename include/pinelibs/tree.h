@@ -11,7 +11,7 @@
 
 // The above two lines ensure that there are no duplicate macros or function declarations
 
-typedef struct Tree {int value; struct Tree* left; struct Tree* right;}* Tree; // defines Tree as a struct containing an int and twi pointers to the left and right trees
+typedef struct Tree* Tree; // declare Tree
 
 #ifndef POP_FAILURE
 #define POP_FAILURE 0x80000000 // This is returned when you try to Remove a NULL Tree
@@ -34,5 +34,11 @@ void treeBalance(Tree*); // Balances the Tree by performing required rotations
 void treeInsert(Tree*, int value); // Inserts the given value in the Tree
 
 int treeRemove(Tree*); // removes the given Node of the Tree
+
+Tree treeLeft(Tree); // returns the Tree to the left of the input Tree
+
+Tree treeRight(Tree); // returns the Tree to the right of the input Tree
+
+int treeVal(Tree); // returns the value stored in the current Tree Node
 
 #endif // PINETREE_H

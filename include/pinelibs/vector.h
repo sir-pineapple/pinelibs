@@ -11,7 +11,7 @@
 
 // The above two lines ensure that there are no duplicate macros or function declarations
 
-typedef struct {int* array; int size; int capacity;} Vector; // define Vector as an array to store the values, and two variables to store size (number of elements) and capacity (variables allocated)
+typedef struct Vector Vector; // declares Vector
 
 Vector newVector(int capacity); // returns an empty vector of the given capacity
 

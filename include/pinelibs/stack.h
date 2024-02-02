@@ -13,12 +13,7 @@
 
 #include <pinelibs/bool.h>
 
-#ifndef PINENODE
-#define PINENODE
-typedef struct Node {int value; struct Node* next;} Node; // defines Node as an int value and Node pointer to the next Node
-#endif // PINENODE
-
-#define Stack Node* // define Stack as a Node pointer
+typedef struct Stack* Stack; // declares Stack
 
 Stack newStack(); // define newStack as NULL
 

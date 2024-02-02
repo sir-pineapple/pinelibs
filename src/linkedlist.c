@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <pinelibs/bool.h>
 
+struct LinkedList {int value; struct LinkedList* next;};
+
 LinkedList newLinkedList() {
 	return NULL;
 }
@@ -12,7 +14,7 @@ Bool llIsEmpty(LinkedList l) {
 
 int llSize(LinkedList l) {
 	int size = 0;
-	Node* n = l;
+	struct LinkedList* n = l;
 	while (n != NULL) {
 		size++;
 		n = n->next;
@@ -21,7 +23,7 @@ int llSize(LinkedList l) {
 }
 
 void llInsertStart(LinkedList* l, int value) {
-	Node* newnode = (Node*) malloc(sizeof(Node));
+	struct LinkedList* newnode = (struct LinkedList*) malloc(sizeof(struct LinkedList));
 	if (newnode == NULL) {
 		exit(EXIT_FAILURE);
 	}
@@ -31,7 +33,7 @@ void llInsertStart(LinkedList* l, int value) {
 }
 
 void llInsertEnd(LinkedList* l, int value) {
-	Node* newnode = (Node*) malloc(sizeof(Node));
+	struct LinkedList* newnode = (struct LinkedList*) malloc(sizeof(struct LinkedList));
 	newnode->value = value;
 	newnode->next = NULL;
 	if (*l == NULL) {
@@ -59,7 +61,7 @@ void llInsertAt(LinkedList* l, int index, int value) {
 	if (prev->next == NULL) {
 		return llInsertEnd(l, value);
 	}
-	Node* newnode = (Node*) malloc(sizeof(Node));
+	struct LinkedList* newnode = (struct LinkedList*) malloc(sizeof(struct LinkedList));
 	if (newnode == NULL) {
 		exit(EXIT_FAILURE);
 	}
@@ -72,7 +74,7 @@ int llRemoveStart(LinkedList* l) {
 	if (*l == NULL) {
 		return POP_FAILURE;
 	}
-	Node* n = *l;
+	struct LinkedList* n = *l;
 	int value = n->value;
 	*l = n->next;
 	free(n);
@@ -83,7 +85,7 @@ int llRemoveEnd(LinkedList* l) {
 	if (*l == NULL) {
 		return POP_FAILURE;
 	}
-	Node* n = *l;
+	struct LinkedList* n = *l;
 	if (n->next == NULL) {
 		int value = n->value;
 		free(n);
@@ -106,7 +108,7 @@ int llRemoveAt(LinkedList* l, int index) {
 	if (index == 0) {
 		return llRemoveStart(l);
 	}
-	Node* prev = *l;
+	struct LinkedList* prev = *l;
 	for (int i=0; i<index-1; i++) {
 		if (prev->next == NULL) {
 			break;
@@ -116,9 +118,20 @@ int llRemoveAt(LinkedList* l, int index) {
 	if (prev->next == NULL) {
 		return llRemoveEnd(l);
 	}
-	Node* n = prev->next;
+	struct LinkedList* n = prev->next;
 	int value = n->value;
 	prev->next = n->next;
 	free(n);
 	return value;
+}
+
+int llValAt(LinkedList l, int index) {
+	LinkedList n = l;
+	for (int i=0; i<index; i++) {
+		if (n->next == NULL) {
+			break;
+		}
+		n = n->next;
+	}
+	return n->value;
 }

@@ -1,6 +1,8 @@
 #include <pinelibs/tree.h>
 #include <stdlib.h>
 
+struct Tree {int value; struct Tree* left; struct Tree* right;};
+
 Tree newTree(int value) {
 	Tree t = (Tree) malloc(sizeof(struct Tree));
 	if (t == NULL) {
@@ -122,4 +124,16 @@ int treeRemove(Tree* t) {
 	*t = (*t)->right;
 	free(rem);
 	return value;
+}
+
+Tree treeLeft(Tree t) {
+	return t->left;
+}
+
+Tree treeRight(Tree t) {
+	return t->right;
+}
+
+int treeVal(Tree t) {
+	return t->value;
 }

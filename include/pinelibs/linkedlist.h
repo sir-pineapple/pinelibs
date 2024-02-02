@@ -13,12 +13,7 @@
 
 #include <pinelibs/bool.h>
 
-#ifndef PINENODE
-#define PINENODE
-typedef struct Node {int value; struct Node* next;} Node; // defines Node as an int value and Node pointer to the next Node
-#endif // PINENODE
-
-#define LinkedList Node* // define LinkedList as a Node pointer
+typedef struct LinkedList* LinkedList; // declares LinkedList
 
 LinkedList newLinkedList(); // define newLinkedList as NULL
 
@@ -41,5 +36,7 @@ int llRemoveStart(LinkedList*); // remove an element from the beginning of the L
 int llRemoveEnd(LinkedList*); // remove an element from the end of the LinkedList
 
 int llRemoveAt(LinkedList*, int index); // remove an element from the given index of the LinkedList
+
+int llValAt(LinkedList, int index);
 
 #endif // PINELL_H

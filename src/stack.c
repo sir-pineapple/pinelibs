@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <pinelibs/bool.h>
 
+struct Stack {int value; struct Stack* next;};
+
 Stack newStack() {
 	return NULL;
 }
@@ -11,7 +13,7 @@ Bool stackIsEmpty(Stack s) {
 }
 
 void stackPush(Stack* s, int value) {
-	Node* newnode = (Node*) malloc(sizeof(Node));
+	struct Stack* newnode = (struct Stack*) malloc(sizeof(struct Stack));
 	if (newnode == NULL) {
 		exit(EXIT_FAILURE);
 	}
@@ -24,7 +26,7 @@ int stackPop(Stack* s) {
 	if (*s == NULL) {
 		return POP_FAILURE;
 	}
-	Node* n = *s;
+	struct Stack* n = *s;
 	int value = n->value;
 	*s = n->next;
 	free(n);

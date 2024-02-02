@@ -1,6 +1,8 @@
 #include <pinelibs/vector.h>
 #include <stdlib.h>
 
+struct Vector {int* array; int size; int capacity;};
+
 Vector newVector(int capacity) {
 	Vector v;
 	v.array = (int*) malloc(sizeof(int) * capacity);
