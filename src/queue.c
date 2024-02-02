@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <pinelibs/bool.h>
 
-struct Node {int value; struct Node* next;};
+typedef struct Node {int value; struct Node* next;} Node;
 
 struct Queue {struct Node* front; struct Node* rear;};
 

@@ -40,7 +40,7 @@ void llInsertEnd(LinkedList* l, int value) {
 		*l = newnode;
 		return;
 	}
-	Node* n = *l;
+	struct LinkedList* n = *l;
 	while (n->next != NULL) {
 		n = n->next;
 	}
@@ -51,7 +51,7 @@ void llInsertAt(LinkedList* l, int index, int value) {
 	if (index == 0) {
 		return llInsertStart(l, value);
 	}
-	Node* prev = *l;
+	struct LinkedList* prev = *l;
 	for (int i=0; i<index-1; i++) {
 		if (prev == NULL) {
 			break;
