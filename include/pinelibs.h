@@ -10,7 +10,7 @@
 
 // The above two lines ensure that there are no duplicate macros or function declarations
 
-#include <pinelibs/bool.h> // to define Nooleans in C
+#include <pinelibs/bool.h> // to define Booleans in C
 #include <pinelibs/float.h> // to store Floating Point values in Integer variables
 #include <pinelibs/vector.h> // to define Vectors in C
 #include <pinelibs/linkedlist.h> // to define Linked Lists in C
