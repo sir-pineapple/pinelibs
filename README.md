@@ -41,3 +41,5 @@ sudo make uninstall
 - stack.h: defines Stacks in C
 - queue.h: defines Queues in C
 - tree.h: defines Binary Trees in C
+
+thanks
